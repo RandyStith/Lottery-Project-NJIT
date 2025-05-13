@@ -31,6 +31,31 @@ randomButton.addEventListener('click', function() {
         resultDisplay.textContent = "No names to choose from!";
     } else {
         const randomIndex = Math.floor(Math.random() * names.length);
-        resultDisplay.textContent = "🎉 Lucky Name:"
+        resultDisplay.textContent = "🎉 Lucky Name:" + names[randomIndex];
     }
-})
+});
+
+function addNameToList(name) {
+    const nameItem = document.createElement('div');
+    nameItem.classList.add('name-item');
+
+    const nameText = document.createElement('span');
+    nameText.textContent = name;
+    nameText.style.marginRight = '10px';
+   
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = '❌';
+    deleteBtn.style.marginLeft = '5px';
+    deleteBtn.onclick = function() {
+        
+        const index = names.indexOf(name);
+        if (index > -1) {
+            names.splice(index, 1);
+        }
+        nameListContainer.removeChild(nameItem);
+    };
+    nameItem.appendChild(nameText);
+    nameItem.appendChild(deleteBtn);
+    nameListContainer.appendChild(nameItem);
+
+}
