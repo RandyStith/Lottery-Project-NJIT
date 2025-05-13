@@ -1,0 +1,28 @@
+.body {
+    background-color: rgb(151, 253, 219);
+    font-family: fantasy ;
+}
+.title {
+    padding-top: 3vw;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 4vw;
+}
+button {
+    padding-top: 1vw ;
+    padding-bottom: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-left: solid 5px rgb(255, 78, 78);
+    border-top: solid 5px rgb(255, 78, 78);
+    border-bottom: solid 5px rgb(185, 4, 4);
+    border-right: solid 5px rgb(185, 4, 4);
+}
+button:active {
+    border-left: solid 5px rgb(185, 4, 4);
+    border-top: solid 5px rgb(185, 4, 4);
+    border-bottom: solid 5px rgb(255, 78, 78);
+    border-right: solid 5px rgb(255, 78, 78);
+}
+
+
